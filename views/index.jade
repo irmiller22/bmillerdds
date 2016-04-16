@@ -1,5 +1,236 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  html
+    body.no-trans.front-page
+      // scrollToTop
+      // ================
+      .scrollToTop.circle
+        i.icon-up-open-big
+      // page wrapper start
+      // ================
+      .page-wrapper
+        // header-container start
+        .header-container
+          // header start
+          // classes:
+          // "fixed": enables fixed navigation mode (sticky menu) e.g. class="header fixed clearfix"
+          // "dark": dark version of header e.g. class="header dark clearfix"
+          // "full-width": mandatory class for the full-width menu layout
+          // "centered": mandatory class for the centered logo layout
+          // ================
+          header.header.fixed.clearfix
+            .container
+              .row
+                .col-md-3
+                  // header-left start
+                  .header-left.clearfix
+                    // logo
+                    #logo.logo
+                      a(href='/')
+                        img#logo_img(src='http://placehold.it/50x50', alt='BWM DDS Logo')
+                  // header-left end
+                .col-md-9
+                  // header-right start
+                  .header-right.clearfix
+                    // main-navigation start
+                    // classes:
+                    // "onclick": Makes the dropdowns open on click, this the default bootstrap behavior e.g. class="main-navigation onclick"
+                    // "animated": Enables animations on dropdowns opening e.g. class="main-navigation animated"
+                    // "with-dropdown-buttons": Mandatory class that adds extra space, to the main navigation, for the search and cart dropdowns
+                    // ================
+                    .main-navigation
+                      nav.navbar.navbar-default(role='navigation')
+                        .container-fluid
+                          // Toggle get grouped for better mobile display
+                          .navbar-header
+                            button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar-collapse-1')
+                              span.sr-only Toggle navigation
+                              span.icon-bar
+                              span.icon-bar
+                              span.icon-bar
+                          // Collect the nav links, forms, and other content for toggling
+                          #navbar-collapse-1.collapse.navbar-collapse.pull-right
+                            // main-menu
+                            ul.nav.navbar-nav
+                              // home start
+                              li.dropdown.mega-menu
+                                a.dropdown-toggle(href='#home') Home
+                              // home end
+                              // clinic start
+                              li.dropdown.mega-menu
+                                a.dropdown(href='#clinic') Clinic
+                              // clinic end
+
+                              // about start
+                              li.dropdown
+                                a.dropdown-toggle(href='#about') About Us
+                              // about end
+
+                              // dental services start
+                              li.dropdown
+                                a.dropdown-toggle(href='#dental-services') Dental Services
+                              // dental services end
+
+                              // contact start
+                              li.dropdown
+                                a.dropdown-toggle(href='#contact') Contact Us
+                              // contact end
+                            // main-menu end
+                      // navbar end
+                    // main-navigation end
+                  // header-right end
+          // header end
+        // header-container end
+        // banner start
+        // ================
+        #home
+        .banner.dark-translucent-bg
+          // section start
+          // ================
+          .container
+            .row
+              .col-md-8.text-center.col-md-offset-2.space-bottom
+                .title.large_white.object-non-visible(data-animation-effect='fadeIn', data-effect-delay='100') Bruce Williamson Miller, DDS
+                p.text-center.lead.object-non-visible(data-animation-effect='fadeIn', data-effect-delay='100') Restorative, Cosmetic & Family Dentistry
+                .separator.object-non-visible(data-animation-effect='fadeIn', data-effect-delay='100')
+
+                .owl-carousel.content-slider
+                  .slide-one
+                    img(src='images/index-carousel/comprehensive.jpeg' alt='comprehensive')
+                  .slide-two
+                    img(src='images/index-carousel/lifetime.jpeg' alt='lifetime')
+                  .slide-three
+                    img(src='images/index-carousel/smile.jpeg' alt='smile')
+                  .slide-three
+                    img(src='images/index-carousel/timthumb.jpeg' alt='timthumb')
+
+                .separator.object-non-visible(data-animation-effect='fadeIn', data-effect-delay='100')
+
+
+          // section end
+        // banner end
+        #clinic
+        section.pv-30.light-gray-bg.clearfix
+          .container
+            h2.title.logo-font.text-center.text-default The Clinic
+            .separator
+            p.text-center
+            br
+            .row.grid-space-10
+              .col-sm-6.col-md-3
+                .pv-30.ph-20.white-bg.feature-box.bordered.text-center
+                  span.icon.default-bg.circle
+                    i.fa.fa-plus-square
+                  h3 Since 1978
+                  .separator.clearfix
+                  p Bruce W. Miller, DDS is originally from Gastonia, and has been the dentist in the local community since 1978.
+                  a(href="#" class="btn btn-default btn-animated") Read More
+                    i.fa.fa-angle-double-right
+              .col-sm-6.col-md-3
+                .pv-30.ph-20.white-bg.feature-box.bordered.text-center
+                  span.icon.default-bg.circle
+                    i.fa.fa-hospital-o
+                  h3 Appointments
+                  .separator.clearfix
+                  p If you'd like to schedule an appointment, please call or click below to fill out an appointment request form.
+                  a(href="#" class="btn btn-default btn-animated") Schedule
+                    i.fa.fa-angle-double-right
+              .col-sm-6.col-md-3
+                .pv-30.ph-20.white-bg.feature-box.bordered.text-center
+                  span.icon.default-bg.circle
+                    i.fa.fa-ambulance
+                  h3 Emergency Calls
+                  .separator.clearfix
+                  p If you need to speak with Dr. Miller regarding an emergency, please contact us at your earliest convenience.
+                  a(href="#" class="btn btn-default btn-animated") Call Us
+                    i.fa.fa-angle-double-right
+              .col-sm-6.col-md-3
+                .pv-30.ph-20.white-bg.feature-box.bordered.text-center
+                  span.icon.default-bg.circle
+                    i.glyphicon.glyphicon-time
+                  h3 Opening Hours
+                  .separator-2.mt-20.clearfix
+                  ul.list-unstyled.small.list-icons.text-left
+                    li
+                      strong.text-default Monday
+                      span.pull-right 8AM - 5PM
+                    li
+                      strong.text-default Tuesday
+                      span.pull-right 8AM - 5PM
+                    li
+                      strong.text-default Wednesday
+                      span.pull-right 7:30AM - 2:30PM
+                    li
+                      strong.text-default Thursday
+                      span.pull-right 8AM - 5PM
+                    li
+                      strong.text-default Friday
+                      span.pull-right 7:30AM - 12:30PM
+
+        #about
+        section.pv-20
+          .container
+            .row
+              .col-md-8.col-md-offset-2
+                h2.title.logo-font.text-center.text-default About Us
+                .separator
+                p.lead.text-center
+                  | Welcome to the website of general dentist Dr. Bruce W. Miller. We hope you will use this site as a means of getting to know us, learning about the services we provide, and  educating yourself on a variety of dental-related topics.
+                p.lead.text-center
+                  | If you and your family are in search of a family or general dentist, Gastonia, NC native Dr. Bruce Miller is eager to be your provider.
+                p.lead.text-center
+                  | Dr. Miller opened his private practice in 1980 and since then, he and his experienced, attentive staff have worked to continually provide individualized care to patients in a relaxed atmosphere. We value your time and make every effort to get you seen on time, with little or no waiting.
+                p.lead.text-center
+                  | We treat the whole family, from children to adults, and offer a variety of services including preventive, restorative and cosmetic dentistry, as well as periodontal treatment and dental implant restorations.
+                p.lead.text-center
+                  | We also treat bruxism with biteguard appliances and make custom mouthguards to prevent sports injuries. We fabricate snoreguard appliances to enable you to sleep more soundly.
+                p.lead.text-center
+                  | Dr. Miller also has received extensive training in cosmetic dentistry. He is committed to continuing education in an effort to provide the most advanced, comfortable and current treatments available today.  He takes great pride in the aesthetics of his custom veneers, anterior crowns and bridges, his anterior composite fillings and his implant restorations.
+                blockquote.margin-clear
+                  h3.text-center
+                    | Our goal is to provide treatment that will enable you to keep your natural teeth for a lifetime.
+                br
+                br
+                p.lead.text-center
+                  | We remain focused on aesthetics through all phases of dental treatment, but it also is important to us that we maintain your teeth’s form and function.
+                p.lead.text-center
+                  | We invite you to contact us to schedule an appointment so that we may meet you and help you with any dental needs you might have.
+                p.lead.text-center
+                  | We accept most insurances and our staff will file your forms with your insurance provider for you. We also offer a variety of payment options to make the treatment you need attainable.
+
+        // footer top start
+        // ================
+        .dark-bg.footer-top.animated-text.default-hovered
+          .container
+            .row
+              .col-md-12
+                .call-to-action.text-center
+                  .row
+                    .col-sm-8
+                      h2 Powerful Bootstrap Template
+                      h2 Waste no more time
+                    .col-sm-4
+                      p.mt-10
+                        a.btn.btn-animated.btn-lg.btn-gray-transparent(href='#')
+                          | Purchase
+                          i.fa.fa-cart-arrow-down.pl-20
+        // footer top end
+        // footer start (Add "dark" class to #footer in order to enable dark footer)
+        // ================
+        footer#footer.clearfix
+          // .subfooter start
+          // ================
+          .subfooter
+            .container
+              .subfooter-inner
+                .row
+                  .col-md-12
+                    p.text-center
+                      | Copyright © 2016 Bruce W. Miller, DDS by
+                      a(target='_blank', href='http://ianmiller.nyc')  Ian Miller
+                      | . All Rights Reserved
+          // .subfooter end
+        // footer end
+      // page-wrapper end
+
