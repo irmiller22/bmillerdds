@@ -1,7 +1,40 @@
 doctype html
 html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+	head
+		meta(charset='utf-8')
+		title= title
+		meta(name='description' content='Bruce Miller, DDS')
+
+		//- Mobile Meta
+		meta(name='viewport' content='width=device-width, initial-scale=1.0')
+		link(rel='stylesheet', href='/stylesheets/style.css' type='text/css')
+		link(rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic' type='text/css')
+		link(rel='stylesheet' href='http://fonts.googleapis.com/css?family=Raleway:700,400,300' type='text/css')
+		link(rel='stylesheet' href='http://fonts.googleapis.com/css?family=Pacifico' type='text/css')
+		link(rel='stylesheet' href='http://fonts.googleapis.com/css?family=PT+Serif' type='text/css')
+
+		//- Bootstrap core CSS
+		link(href='/stylesheets/bootstrap.min.css' rel='stylesheet' type='text/css')
+
+		//- Font Awesome CSS
+		link(href='/fonts/font-awesome/css/font-awesome.css' rel='stylesheet' type='text/css')
+
+		//- Fontello CSS
+		link(href='/fonts/fontello/css/fontello.css' rel='stylesheet' type='text/css')
+
+		//- Plugins
+		link(href='/plugins/magnific-popup/magnific-popup.css' rel='stylesheet')
+		link(href='/plugins/rs-plugin/css/settings.css' rel='stylesheet')
+		link(href='/stylesheets/animations.css' rel='stylesheet')
+		link(href='/plugins/owl-carousel/owl.carousel.css' rel='stylesheet')
+		link(href='/plugins/owl-carousel/owl.transitions.css' rel='stylesheet')
+		link(href='/plugins/hover/hover-min.css' rel='stylesheet')
+
+		//- the project core CSS file
+		link(href='/stylesheets/style.css' rel='stylesheet')
+
+		//- Color Scheme (In order to change the color scheme, replace the blue.css with the color scheme that you prefer)
+		link(href='stylesheets/skins/light_blue.css' rel='stylesheet')
+		link(href='stylesheets/custom.css' rel='stylesheet' type='text/css')
+	body
+		block content
