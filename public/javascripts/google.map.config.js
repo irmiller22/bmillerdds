@@ -6,8 +6,8 @@
 		if ($("#map-canvas").length>0) {
 			var map, myLatlng, myZoom, marker;
 			// Set the coordinates of your location
-			myLatlng = new google.maps.LatLng(41.38791700, 2.16991870);
-			myZoom = 12;
+			myLatlng = new google.maps.LatLng(35.209797, -81.164521);
+			myZoom = 15;
 			function initialize() {
 				var mapOptions = {
 					zoom: myZoom,
@@ -18,9 +18,10 @@
 				map = new google.maps.Map(document.getElementById("map-canvas"),mapOptions);
 				marker = new google.maps.Marker({
 					map:map,
-					draggable:true,
+					draggable:false,
 					animation: google.maps.Animation.DROP,
-					position: myLatlng
+					position: myLatlng,
+					title: 'Bruce W. Miller, DDS'
 				});
 				google.maps.event.addDomListener(window, "resize", function() {
 					map.setCenter(myLatlng);
@@ -30,4 +31,4 @@
 		}
 	}); // End document ready
 
-})(this.jQuery);		
+})(this.jQuery);

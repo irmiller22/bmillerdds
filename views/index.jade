@@ -122,7 +122,7 @@ block content
                 .pv-30.ph-20.white-bg.feature-box.bordered.text-center
                   span.icon.default-bg.circle
                     i.fa.fa-plus-square
-                  h3 Since 1978
+                  h3 Since 1980
                   .separator.clearfix
                   p Bruce W. Miller, DDS is originally from Gastonia, and has been the dentist in the local community since 1978.
                   a(href="#" class="btn btn-default btn-animated") Read More
@@ -200,19 +200,63 @@ block content
                   | We accept most insurances and our staff will file your forms with your insurance provider for you. We also offer a variety of payment options to make the treatment you need attainable.
 
         // footer start (Add "dark" class to #footer in order to enable dark footer)
-        #footer
-        footer.clearfix
-          // .subfooter start
-          .subfooter
+        footer#footer.dark.clearfix
+          .footer
             .container
-              .subfooter-inner
+              .footer-inner
                 .row
-                  .col-md-12
-                    p.text-center
-                      | Copyright © 2016 Bruce W. Miller, DDS by
-                      a(target='_blank', href='http://ianmiller.nyc')  Ian Miller
-                      | . All Rights Reserved
-          // .subfooter end
-        // footer end
-      // page-wrapper end
+                  .col-md-3
+                    .footer-content
+                      .logo-footer
+                        img#logo-footer(src='http://placehold.it/150x40')
+                      p
+                        | Please find supporting details regarding Bruce W. Miller's practice as it relates to our financial policy, services provided, and patient forms below.
+                      .separator-2
+                      nav
+                        ul.nav.nav-pills.nav-stacked
+                          li
+                            a(href="#about") About Us
+                          li
+                            a(href="patients/form.html") Patient Forms
+                          li
+                            a(href="patients/financial_policy.html") Financial Policy
+                  .col-md-6
+                    .footer-content
+                      div#map-canvas
+                  .col-md-3
+                    .footer-content
+                      h2.title Find Us
+                      .separator-2
+                      p
+                        | We are located at 3100 Pineridge Lane, Gastonia, NC 28056, right next to Dickson Animal Clinic.
+                      ul.social-links.circle.animated-effect-1
+                        li.facebook
+                        li.twitter
+                        li.googleplus
+                        li.linkedin
+                      .separator-2
+                      ul.list-icons
+                        li
+                          i.fa.fa-map-marker.pr-10.text-default
+                          | 3100 Pineridge Lane, 28056
+                        li
+                          i.fa.fa-phone.pr-10.text-default
+                          | (704) 864-2608
+                        li
+                          a(href="mailto:brucewmiller@brucemillerdds.com")
+                            i.fa.fa-envelope-o.pr-10
+                            | brucewmiller@brucemillerdds.com
+            // .subfooter start
+            .subfooter
+              .container
+                .subfooter-inner
+                  .row
+                    .col-md-12
+                      p.text-center
+                        | Copyright © 2016 Bruce W. Miller, DDS by
+                        a(target='_blank', href='http://ianmiller.nyc')  Ian Miller
+                        | . All Rights Reserved
+            // .subfooter end
+          // footer end
+        // page-wrapper end
 
